@@ -1,4 +1,4 @@
 {
-  "*.{js,ts,tsx,jsx,astro,md,mdx}": "eslint --quiet",
+  "*.{js,ts,tsx,jsx,astro,md,mdx}": "eslint",
   "*.{md,json,css,js,ts,jsx,html,astro}": "prettier --write"
 }
