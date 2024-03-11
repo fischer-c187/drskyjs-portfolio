@@ -1,5 +1,7 @@
 ---
 import Header from './Header.astro';
+import favIcon32 from '../assets/images/favicon-32x32.png';
+import favIcon16 from '../assets/images/favicon-16x16.png';
 
 interface Props {
   title: string;
@@ -23,8 +25,8 @@ const { title, description } = Astro.props;
       href='https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap'
       rel='stylesheet'
     />
-    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href={favIcon32.src} />
+    <link rel='icon' type='image/png' sizes='16x16' href={favIcon16.src} />
     <title>{title}</title>
   </head>
   <body class='mx-auto max-w-7xl py-6 selection:bg-black selection:text-white'>
