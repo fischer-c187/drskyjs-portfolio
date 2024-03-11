@@ -1,0 +1,14 @@
+---
+interface Props {
+  username: string;
+}
+
+const { username }: Props = Astro.props;
+---
+
+<div class='text-center'>
+  <span class='relative top-3 border border-black bg-white px-4 py-2 font-sans text-xs font-light'>
+    @{username}
+  </span>
+  <hr class='h-1 border-none bg-black' />
+</div>

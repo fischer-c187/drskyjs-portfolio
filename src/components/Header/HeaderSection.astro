@@ -1,0 +1,15 @@
+---
+const hrClasses = 'h-px w-full flex-grow border-none bg-black md:mx-2 md:w-fit';
+
+interface Props {
+  sideOfBar: 'left' | 'right';
+}
+
+const { sideOfBar } = Astro.props;
+---
+
+<div class='flex w-full flex-col items-center space-y-4 md:flex-row md:items-center md:space-y-0'>
+  {sideOfBar === 'left' && <hr class={hrClasses} />}
+  <slot />
+  {sideOfBar === 'right' && <hr class={hrClasses} />}
+</div>
