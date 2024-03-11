@@ -1,0 +1,25 @@
+---
+import LinkList from '../components/Header/LinkList.astro';
+import socialNetworksItems from '../config/socialNetworks';
+import navItems from '../config/nav';
+import HeaderSection from '../components/Header/HeaderSection.astro';
+import IdentityBadge from '../components/Header/UsernameBadge.astro';
+import siteConfig from '../config/config';
+---
+
+<header class='mb-4 p-2 px-4'>
+  <div class='mb-3 flex flex-col items-center font-mono md:mb-2 md:flex-row md:justify-center'>
+    <HeaderSection sideOfBar='right'>
+      <nav>
+        <LinkList items={navItems} />
+      </nav>
+    </HeaderSection>
+    <span class='my-6 whitespace-nowrap font-sans text-2xl md:my-0 md:w-min md:px-4'>
+      {siteConfig.name}
+    </span>
+    <HeaderSection sideOfBar='left'>
+      <LinkList items={socialNetworksItems} />
+    </HeaderSection>
+  </div>
+  <IdentityBadge username={siteConfig.username} />
+</header>

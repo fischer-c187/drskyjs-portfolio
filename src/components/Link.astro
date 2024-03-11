@@ -1,0 +1,20 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+export interface Props {
+  url: string;
+  className?: string;
+}
+
+const { url, className = '' } = Astro.props;
+---
+
+<a
+  href={url}
+  class={twMerge(
+    'after:bg-hover relative overflow-clip after:absolute underline after:bottom-0 after:left-0 after:-z-10 after:h-full after:w-full after:-translate-x-full after:transition-transform hover:after:translate-x-0',
+    className,
+  )}
+>
+  <slot /></a
+>
