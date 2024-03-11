@@ -1,8 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Link from '../components/Link.astro';
 ---
 
-<Layout title='drskyjs'>
-  <h1 class='text-center text-white'>Portefolio</h1>
+<Layout title='drskyJs' description='Main'>
+  <div class='mx-auto w-1/2'>
+    <h1 class='bg-hovertext text-center font-sans text-xl text-black'>SoulCycle</h1>
+    <p class='line under font-mono text-xs'>
+      is a high-energy, boutique spinning class with a cult following. In 2015 and 2016, I SoulCycle
+      is a high-energy, boutique spinning class with a cult following. In 2015 ffffand 2016, I
+      designed <a
+        href='/test'
+        class='relative overflow-clip underline after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-full after:w-full after:-translate-x-full after:bg-hover after:transition-transform hover:after:translate-x-0'
+        >test</a
+      > for their iOS and web experiences. SoulCycle for iOS created an enormous lift in class bookings,
+      helping riders get out of the app and onto their favorite bike.
+    </p>
+  </div>
 </Layout>
