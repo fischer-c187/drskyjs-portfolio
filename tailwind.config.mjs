@@ -9,7 +9,7 @@ export default {
         hover: '#FFEF8D',
       },
       fontFamily: {
-        sans: ['Merriweather', ...defaultTheme.fontFamily.sans],
+        sans: ['CooperLight', 'Merriweather', ...defaultTheme.fontFamily.sans],
         mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
       },
     },

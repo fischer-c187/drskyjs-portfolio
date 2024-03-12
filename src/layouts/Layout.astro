@@ -34,3 +34,14 @@ const { title, description } = Astro.props;
     <slot />
   </body>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: 'CooperLight';
+    src:
+      url('/fonts/cooperl.woff2') format('woff2'),
+      /* Le format le plus compressé et moderne */ url('/fonts/cooperl.ttf') format('truetype'); /* Pour une compatibilité plus ancienne */
+    font-weight: normal;
+    font-style: normal;
+  }
+</style>
