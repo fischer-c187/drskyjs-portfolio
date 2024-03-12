@@ -1,9 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Link from '../components/Link.astro';
+import Hero from '../components/Hero/Hero.astro';
+import siteConfig from '../config/config';
 ---
 
 <Layout title='drskyJs' description='Main'>
+  <Hero texts={siteConfig.heroText} image={siteConfig.heroImage} />
+
   <div class='mx-auto w-1/2'>
     <h1 class='bg-hovertext text-center font-sans text-xl text-black'>SoulCycle</h1>
     <p class='line under font-mono text-xs'>
