@@ -44,7 +44,27 @@ module.exports = {
       // Define the configuration for `<script>` tag.
       // Script in `<script>` is assigned a virtual file name with the `.js` extension.
       files: ['**/*.astro/*.js', '*.astro/*.js'],
+      env: {
+        browser: true,
+        es2020: true,
+      },
+      parserOptions: {
+        sourceType: 'module',
+      },
+    },
+    {
+      // Define the configuration for `<script>` tag when using `client-side-ts` processor.
+      // Script in `<script>` is assigned a virtual file name with the `.ts` extension.
+      files: ['**/*.astro/*.ts', '*.astro/*.ts'],
+      env: {
+        browser: true,
+        es2020: true,
+      },
       parser: '@typescript-eslint/parser',
+      parserOptions: {
+        sourceType: 'module',
+        project: null,
+      },
     },
   ],
 };
