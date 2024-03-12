@@ -1,14 +1,22 @@
 ---
 interface Props {
-  username: string;
+  text: string;
+  title?: boolean;
 }
-
-const { username }: Props = Astro.props;
+const { text }: Props = Astro.props;
 ---
 
 <div class='text-center'>
-  <span class='relative top-3 border border-black bg-white px-4 py-2 font-sans text-xs font-light'>
-    @{username}
-  </span>
+  {
+    Astro.url.pathname === '/' ? (
+      <h1 class='text-l relative top-3 inline border border-black bg-white px-4 py-2 font-sans font-light'>
+        {text}
+      </h1>
+    ) : (
+      <span class='text-l relative top-3 border border-black bg-white px-4 py-2 font-sans font-light'>
+        {text}
+      </span>
+    )
+  }
   <hr class='h-1 border-none bg-black' />
 </div>
