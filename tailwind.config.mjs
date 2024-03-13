@@ -10,7 +10,7 @@ export default {
       },
       fontFamily: {
         sans: ['CooperLight', 'Merriweather', ...defaultTheme.fontFamily.sans],
-        mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
+        mono: ['League Spartan', 'Roboto Mono', ...defaultTheme.fontFamily.mono],
       },
     },
   },
