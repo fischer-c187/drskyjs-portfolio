@@ -1,0 +1,28 @@
+---
+import siteConfig from '../../config/config';
+---
+
+<section class='mt-20 px-8'>
+  <h2 class='text-center font-sans text-4xl font-bold'>Compétences.</h2>
+  <p class='mt-4 font-mono text-xl font-light leading-8'>
+    Au cours de mes études, j'ai acquis une solide compréhension des concepts de l'informatique et
+    du développement web, et j'ai consacré beaucoup de mon temps libre à appliquer ces concepts à
+    des projets concret.
+  </p>
+  <div
+    class='mt-4 flex flex-col items-center justify-between md:flex-row md:items-start md:justify-around'
+  >
+    {
+      Object.keys(siteConfig.skills).map((skill, index) => (
+        <div class='mt-4 text-center md:text-left'>
+          <h3 class=' font-mono text-2xl font-bold '>{skill}</h3>
+          <ul class='flex flex-wrap justify-center gap-3  md:flex-col md:gap-1'>
+            {siteConfig.skills[skill].map((subSkill, index) => (
+              <li class='font-mono text-base font-light'>{subSkill}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
